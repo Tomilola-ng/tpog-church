@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
+import { Footer } from "@/components/shared/Footer";
+import { Navbar } from "@/components/shared/Navbar";
 
 const body = Inter({ subsets: ["latin"], variable: "--font-body" });
 
@@ -58,7 +60,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${body.variable} ${heading.variable}`}>
-      <body className={`${body.className} antialiased`}>{children}</body>
+      <body className={`${body.className} antialiased`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
