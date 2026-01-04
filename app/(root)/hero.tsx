@@ -46,7 +46,7 @@ export function Hero() {
       </AnimatePresence>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pt-20 text-center">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center lg:pt-20">
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
