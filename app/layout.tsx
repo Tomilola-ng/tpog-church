@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Footer } from "@/components/shared/Footer";
 import { Navbar } from "@/components/shared/Navbar";
+import { SupportSection } from "@/components/shared/SupportSection";
 
 const body = Inter({ subsets: ["latin"], variable: "--font-body" });
 
@@ -63,6 +64,7 @@ export default function RootLayout({
       <body className={`${body.className} antialiased`}>
         <Navbar />
         {children}
+        <SupportSection />
         <Footer />
       </body>
     </html>
