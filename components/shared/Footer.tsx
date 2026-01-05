@@ -140,20 +140,7 @@ export function Footer() {
           <p className="text-center text-sm text-gray-500 md:text-left">
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-gray-500">
-            <Link
-              href="/privacy-policy"
-              className="transition-colors hover:text-white"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="transition-colors hover:text-white"
-            >
-              Terms of Service
-            </Link>
-          </div>
+          <div className="flex gap-6 text-sm text-gray-500"></div>
         </div>
       </div>
     </footer>

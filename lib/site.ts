@@ -7,7 +7,6 @@ export const siteConfig = {
     { name: "Home", href: "/" },
     { name: "Sermons", href: "/sermons" },
     { name: "About Us", href: "/about-us" },
-    { name: "Location", href: "/location" },
     { name: "Contact", href: "/contact-us" },
   ],
 };
