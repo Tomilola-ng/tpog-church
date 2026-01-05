@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Sermons } from "@/lib/sermons";
 import { SermonCard } from "@/components/shared/SermonCard";
-import { Hero } from "./hero";
+import { Hero } from "@/components/shared/Hero";
 
 export const metadata: Metadata = {
   title: "Sermons | All Saints Global Mandate Church",
@@ -12,7 +12,15 @@ export const metadata: Metadata = {
 export default function SermonsPage() {
   return (
     <main role="main">
-      <Hero />
+      <Hero
+        title="Sermons"
+        description={
+          <p className="mb-2">
+            Explore our collection of messages designed to build your faith and
+            equip you for a life of victory.
+          </p>
+        }
+      />
       <div className="container mx-auto px-4 py-12 lg:py-20">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Sermons.map((sermon) => (
