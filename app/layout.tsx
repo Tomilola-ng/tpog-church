@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Libre_Baskerville } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Footer } from "@/components/shared/Footer";
@@ -62,6 +63,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${body.variable} ${heading.variable}`}>
       <body className={`${body.className} antialiased`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2RV6ECSYY2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2RV6ECSYY2');
+          `}
+        </Script>
         <Navbar />
         {children}
         <SupportSection />
